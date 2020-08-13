@@ -2,9 +2,13 @@
 Steps to Install:
 
 git clone https://github.com/trybotics/ecommerce-analytics.git
+
 npm install
+
 node server.js  (Backend will run on port http://localhost:8080/)  
+
 npm start  (UI will run on port http://localhost:3000/)
+
 
 #Technologies:
 
