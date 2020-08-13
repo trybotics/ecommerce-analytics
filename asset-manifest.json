@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/trybotics/ecommerce-analytics/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/trybotics/ecommerce-analytics/static/js/main.3779480b.chunk.js",
+    "main.js.map": "/trybotics/ecommerce-analytics/static/js/main.3779480b.chunk.js.map",
+    "runtime-main.js": "/trybotics/ecommerce-analytics/static/js/runtime-main.30b0ffe0.js",
+    "runtime-main.js.map": "/trybotics/ecommerce-analytics/static/js/runtime-main.30b0ffe0.js.map",
+    "static/js/2.9418978f.chunk.js": "/trybotics/ecommerce-analytics/static/js/2.9418978f.chunk.js",
+    "static/js/2.9418978f.chunk.js.map": "/trybotics/ecommerce-analytics/static/js/2.9418978f.chunk.js.map",
+    "index.html": "/trybotics/ecommerce-analytics/index.html",
+    "precache-manifest.ca7b68e4f523c56894c306a37a71524b.js": "/trybotics/ecommerce-analytics/precache-manifest.ca7b68e4f523c56894c306a37a71524b.js",
+    "service-worker.js": "/trybotics/ecommerce-analytics/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/trybotics/ecommerce-analytics/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.9418978f.chunk.js.LICENSE.txt": "/trybotics/ecommerce-analytics/static/js/2.9418978f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.30b0ffe0.js",
+    "static/js/2.9418978f.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.3779480b.chunk.js"
+  ]
+}
