@@ -11,13 +11,87 @@ class App extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      orders: [],
-      customers: []
+      orders: [
+        {
+            "_id": {
+                "day": 13
+            },
+            "orderCount": 2,
+            "productCount": 3,
+            "productQuantity": 6,
+            "amount": 3200
+        },
+        {
+            "_id": {
+                "day": 7
+            },
+            "orderCount": 1,
+            "productCount": 2,
+            "productQuantity": 5,
+            "amount": 2700
+        },
+        {
+            "_id": {
+                "day": 18
+            },
+            "orderCount": 1,
+            "productCount": 1,
+            "productQuantity": 4,
+            "amount": 2000
+        },
+        {
+            "_id": {
+                "day": 25
+            },
+            "orderCount": 3,
+            "productCount": 4,
+            "productQuantity": 9,
+            "amount": 4900
+        },
+        {
+            "_id": {
+                "day": 15
+            },
+            "orderCount": 1,
+            "productCount": 1,
+            "productQuantity": 5,
+            "amount": 3000
+        }
+    ],
+      customers: [
+        {
+          "_id": "5f351f05a194f93730f50763",
+          "name": "karan",
+          "email": "karan.shaw9888@gmail.com",
+          "orderCount": 6,
+          "productCount": 9,
+          "productQuantity": 22,
+          "amount": 11600
+        },
+        {
+          "_id": "5f351f3ea194f93730f50769",
+          "name": "karan1",
+          "email": "karan1@gmail.com",
+          "orderCount": 2,
+          "productCount": 2,
+          "productQuantity": 7,
+          "amount": 4200
+        },
+        {
+          "_id": "5f351f3ea194f93730f5076a",
+          "name": "karan2",
+          "email": "karan2@gmail.com",
+          "orderCount": 0,
+          "productCount": 0,
+          "productQuantity": 0,
+          "amount": 0
+        }
+      ]
     }
   }
   componentDidMount() {
-    this.getCustomer()
-    this.getOrder()
+    // this.getCustomer()
+    // this.getOrder()
   }
 
   getCustomer = () => {
