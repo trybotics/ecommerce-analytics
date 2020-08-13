@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "822d92d72ed88ca7ac399703789aacce",
+    "revision": "41e390c12f0d4df737c66c8ef636e16c",
     "url": "/trybotics/ecommerce-analytics/index.html"
   },
   {
-    "revision": "d9acd604a38557f5f093",
+    "revision": "a5b0e0b7e8f65122cd8a",
     "url": "/trybotics/ecommerce-analytics/static/css/main.5ecd60fb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/trybotics/ecommerce-analytics/static/js/2.9418978f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d9acd604a38557f5f093",
-    "url": "/trybotics/ecommerce-analytics/static/js/main.3779480b.chunk.js"
+    "revision": "a5b0e0b7e8f65122cd8a",
+    "url": "/trybotics/ecommerce-analytics/static/js/main.e2ccee08.chunk.js"
   },
   {
     "revision": "18f6b3e5fd961cfc88c7",

@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/trybotics/ecommerce-analytics/precache-manifest.ca7b68e4f523c56894c306a37a71524b.js"
+  "/trybotics/ecommerce-analytics/precache-manifest.16b46a77d0f7292f2df6eab80bc415b4.js"
 );
 
 self.addEventListener('message', (event) => {
