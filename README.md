@@ -12,7 +12,7 @@ npm start  (UI will run on port http://localhost:3000/)
 
 # Technologies:
 
-Frontend - React JS with Redux
+Frontend - React JS
 
 Backend - Node Js with Express Js 
 
