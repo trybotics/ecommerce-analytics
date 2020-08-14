@@ -261,10 +261,10 @@ class App extends PureComponent {
   constructor(props) {
     super(props)
     this.state = {
-      // orders: [],
-      // customers: [],
-      orders: orderDemoData,
-      customers: customerDemoData
+      orders: [],
+      customers: [],
+      // orders: orderDemoData,
+      // customers: customerDemoData
     }
   }
   componentDidMount() {
