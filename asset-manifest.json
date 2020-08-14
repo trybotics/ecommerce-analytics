@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/ecommerce-analytics/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/ecommerce-analytics/static/js/main.4268b191.chunk.js",
-    "main.js.map": "/ecommerce-analytics/static/js/main.4268b191.chunk.js.map",
+    "main.js": "/ecommerce-analytics/static/js/main.5c22a56c.chunk.js",
+    "main.js.map": "/ecommerce-analytics/static/js/main.5c22a56c.chunk.js.map",
     "runtime-main.js": "/ecommerce-analytics/static/js/runtime-main.34992381.js",
     "runtime-main.js.map": "/ecommerce-analytics/static/js/runtime-main.34992381.js.map",
-    "static/js/2.9418978f.chunk.js": "/ecommerce-analytics/static/js/2.9418978f.chunk.js",
-    "static/js/2.9418978f.chunk.js.map": "/ecommerce-analytics/static/js/2.9418978f.chunk.js.map",
+    "static/js/2.4dbbdba3.chunk.js": "/ecommerce-analytics/static/js/2.4dbbdba3.chunk.js",
+    "static/js/2.4dbbdba3.chunk.js.map": "/ecommerce-analytics/static/js/2.4dbbdba3.chunk.js.map",
     "index.html": "/ecommerce-analytics/index.html",
-    "precache-manifest.1e96cf63f1d699d963430fc4592f119f.js": "/ecommerce-analytics/precache-manifest.1e96cf63f1d699d963430fc4592f119f.js",
+    "precache-manifest.fd7bd0b429a7b3149ac6a6476e8e078b.js": "/ecommerce-analytics/precache-manifest.fd7bd0b429a7b3149ac6a6476e8e078b.js",
     "service-worker.js": "/ecommerce-analytics/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/ecommerce-analytics/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.9418978f.chunk.js.LICENSE.txt": "/ecommerce-analytics/static/js/2.9418978f.chunk.js.LICENSE.txt"
+    "static/js/2.4dbbdba3.chunk.js.LICENSE.txt": "/ecommerce-analytics/static/js/2.4dbbdba3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.34992381.js",
-    "static/js/2.9418978f.chunk.js",
+    "static/js/2.4dbbdba3.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.4268b191.chunk.js"
+    "static/js/main.5c22a56c.chunk.js"
   ]
 }
