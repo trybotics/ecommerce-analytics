@@ -50,24 +50,24 @@ app.get('/customer', function (req, res) {
             "productCount": {
                 "$sum": {
                     "$map": {
-                        input: "$orders",
-                        as: "order",
-                        in: { "$sum": { "$size": "$$order.products" } }
+                        "input": "$orders",
+                        "as": "order",
+                        "in": { "$sum": { "$size": "$$order.products" } }
                     }
                 }
             },
             "productQuantity": {
                 "$sum": {
                     "$map": {
-                        input: "$orders",
-                        as: "order",
-                        in: {
+                        "input": "$orders",
+                        "as": "order",
+                        "in": {
                             "$sum":
                             {
                                 "$map": {
-                                    input: "$$order.products",
-                                    as: "product",
-                                    in: "$$product.quantity"
+                                    "input": "$$order.products",
+                                    "as": "product",
+                                    "in": "$$product.quantity"
                                 }
                             }
                         }
@@ -87,26 +87,102 @@ app.get('/order', function (req, res) {
     Order.aggregate([
         {
             "$group": {
-                "_id": { day: { "$dayOfMonth": "$created" } },
+                "_id": { "day": { "$dayOfMonth": "$created" } },
                 "orderCount": { "$sum": 1 },
                 "productCount": { "$sum": { "$size": "$products" } },
                 "productQuantity": {
                     "$sum": {
                         "$sum": {
                             "$map": {
-                                input: "$products",
-                                as: "product",
-                                in: "$$product.quantity"
+                                "input": "$products",
+                                "as": "product",
+                                "in": "$$product.quantity"
                             }
                         }
                     }
                 },
                 "amount": { "$sum": "$amount" }
+            },
+        },
+        {
+            "$replaceRoot": {
+                "newRoot": {
+                    "day": "$_id.day",
+                    "orderCount": "$orderCount",
+                    "productCount": "$productCount",
+                    "productQuantity": "$productQuantity",
+                    "amount": "$amount"
+                }
+            }
+        },
+        {
+            "$group": {
+                "_id": null,
+                "orders": { "$push": "$$ROOT" }
+            }
+        },
+        {
+            "$project": {
+                "orders": {
+                    "$map": {
+                        "input": { "$range": [1, 32] },
+                        "as": "date",
+                        "in": {
+                            "$let": {
+                                "vars": { "dateIndex": { "$indexOfArray": ["$orders.day", "$$date"] } },
+                                "in": {
+                                    "$cond": {
+                                        "if": { "$ne": ["$$dateIndex", -1] },
+                                        "then": { "$arrayElemAt": ["$orders", "$$dateIndex"] },
+                                        "else": {
+                                            "day": "$$date",
+                                            "orderCount": 0,
+                                            "productCount": 0,
+                                            "productQuantity": 0,
+                                            "amount": 0
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "$unwind": "$orders"
+        },
+        {
+            "$replaceRoot": {
+                "newRoot": "$orders"
+            }
+        },
+        {
+            "$sort": {
+                "day": 1
             }
         }
-    ], function (err, order) {
+    ], function (err, orders) {
         if (err) throw err;
-        // console.log('order', order)
-        res.json(order)
+        // let ordersData = orders.map(order => {
+        //     order.day = order._id.day
+        //     delete order._id
+        //     return { ...order }
+        // })
+        // ordersData = Array.from({ length: 31 }, (value, index) => {
+        //     return {
+        //         day: index + 1,
+        //         orderCount: 0,
+        //         productCount: 0,
+        //         productQuantity: 0,
+        //         amount: 0
+        //     }
+        // }).map(data => {
+        //     let index = ordersData.findIndex((order, i) => {
+        //         return order.day == data.day
+        //     })
+        //     return index != -1 ? ordersData[index] : data
+        // })
+        res.json(orders)
     })
 })
